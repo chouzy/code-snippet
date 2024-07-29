@@ -1,0 +1,13 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+.vscode
+*.iml
+out
+gen
+*.sum
+*.txt
+*.log
+src/bitmap/sort

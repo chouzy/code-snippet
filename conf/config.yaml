@@ -1,0 +1,30 @@
+Server:
+  Name: code                     # 注册到consul的服务名
+  Tag:                           # 注意是字符数组形式, 不允许空数据
+  IP: 127.0.0.1                  # 服务的IP
+  Port: 8000                     # 服务的端口
+  Interval: 10                   # 健康检查间隔, 单位：秒
+  Deregister: 1                  # 注销时间, 相当于过期时间, 单位：分钟
+  RunMode: debug                 # release/debug/test
+
+Mysql:
+  Host: 127.0.0.1
+  Port: 3306
+  UserName: root
+  Password: root
+  DbName: code-snippet
+
+Redis:
+  Addr: 127.0.0.1:6379
+  password:
+  Db: 0
+  PoolSize: 20
+
+Logger:
+  LogFileName: code
+  LogFileExt: .logger
+  LogSavePath: ./logger
+  MaxSize: 100    #在进行切割之前，日志文件的最大大小（MB为单位）
+  MaxAge: 30      #保留旧文件的最大天数
+  MaxBackups: 30  #保留旧文件的最大个数
+  Compress: false #是否压缩/归档旧文件
